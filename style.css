@@ -4,30 +4,30 @@ body {
     background-color: #000;
     font-family: "IBM Plex Mono" , mono space;
     color: white;
+    font-size: 64px;
 
-}
-
-section {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.center {
-    text-align: center;
-    line-height: 10px;
-    display: inline-block;
+    opacity: 1;
+    transition: opacity 3s;
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 1em;
 }
 
-.link {
-    animation: breath 5s infinite;
+h2 {
+    font-size: .6em;
+}
+
+h3 {
+    font-size: .3em;
+}
+
+.tw-icon {
+    position: absolute;
+    top: 90%;
+    left: 1%;
+    transform: translate(1% , 90%);
+    font-size: 24px;
 }
 
 a {
@@ -36,7 +36,33 @@ a {
     transition: .5s;
 }
 
-a:hover {
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.fd-col {
+    flex-direction: column;
+}
+
+.fb-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+    line-height: 10px;
+    display: inline-block;
+}
+
+.link {
+    animation: breath 5s infinite;
+}
+
+
+.link:hover {
     transition: .5s;
     color: black;
 }
@@ -47,13 +73,38 @@ a:hover {
     background-color: white;
 }
 
-i {
-    position: absolute;
-    top: 90%;
-    left: 1%;
-    transform: translate(1% , 90%);
-    font-size: 24px;
+.p-title {
+    margin-top: 25px;
+    margin-left: 25px;
 }
+
+.p-container {
+    margin: 10px;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    float: left;
+
+}   
+
+#p-folder {
+    margin: 15px;
+    font-size: .5em;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
+
+#p-folder > .p-icon {
+    margin-left: 5px;
+}
+
+#p-folder > .p-text {
+    margin-top: 12px;
+    font-size: .4em;
+    user-select: none;
+}
+
 
 @keyframes breath {
     0% { color: white; }
